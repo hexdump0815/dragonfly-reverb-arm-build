@@ -1,0 +1,13 @@
+diff --git a/common/Makefile.mk b/common/Makefile.mk
+index 8f5dec1..e7272a9 100644
+--- a/common/Makefile.mk
++++ b/common/Makefile.mk
+@@ -23,7 +23,7 @@ endif
+ # Set build and link flags
+ 
+ BASE_FLAGS = -Wall -Wextra -pipe -MD -MP
+-BASE_OPTS  = -O2 -mtune=generic -msse -msse2 -fdata-sections -ffunction-sections
++BASE_OPTS  = -O2 -march=armv7 -mfpu=neon -mno-unaligned-access -fdata-sections -ffunction-sections
+ 
+ ifeq ($(MACOS),true)
+ # MacOS linker flags
